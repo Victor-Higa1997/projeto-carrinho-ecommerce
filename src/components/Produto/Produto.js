@@ -1,15 +1,18 @@
-import { DivCesta, DivDescProduto, DivProduto, DivProdutoDesc, ImgProduto, ProdutoImg, PTituloProduto, PValorDescontoProduto, PValorProduto, SpanTituloProduto, SpanValorDescontoProduto, SpanValorProduto } from "../../styles/Produto.style"
+import { DivCesta, DivDescProduto, ImgProduto, SpanTituloProduto, SpanValorDescontoProduto, SpanValorProduto } from "../../styles/Produto.style"
 
 
-export const Produto = () =>{
+export const Produto = ({valor, indice}) =>{
     return(
         <>
             <DivCesta>
-                <ImgProduto/>
+                {console.log(indice)}
+                {console.log(valor[indice].name)}
+                
+                <ImgProduto src={valor[indice].imageUrl}/>
                 <DivDescProduto>
-                    <SpanTituloProduto>Trufa de morango</SpanTituloProduto>
-                    <SpanValorProduto>R$ 1,23</SpanValorProduto>
-                    <SpanValorDescontoProduto>R$ 1,11</SpanValorDescontoProduto>
+                    <SpanTituloProduto>{valor[indice].name}</SpanTituloProduto>
+                    <SpanValorProduto>{(valor[indice].price/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</SpanValorProduto>
+                    <SpanValorDescontoProduto>{(valor[indice].sellingPrice/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</SpanValorDescontoProduto>
                 </DivDescProduto>
             </DivCesta>
         </>

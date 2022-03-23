@@ -1,9 +1,8 @@
 
-export const AcessoAPI = async () =>{
-    var response = await fetch('http://localhost:5001/itemMetadata');
+export const AcessoAPI = async (url) =>{
+    const response = await fetch(url);
     try {
         const data = await response.json()
-        console.log(data)
         return data
     } catch (error) {
         console.log(error)
