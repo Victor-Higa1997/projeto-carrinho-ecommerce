@@ -4,7 +4,8 @@ Carrinho de compras e-commerce:
 - Quando o valor total for maior que R$10,00 reais aparece a mensagem de frete grátis! \o/
 - 
 - Para rodar o projeto execute os seguintes comandos:
-- 
+-
+- npm install -g json-server
 - npm install
 - npx json-server --watch data/abaixo.json --port 5001
 - npx json-server --watch data/acima.json --port 5000
