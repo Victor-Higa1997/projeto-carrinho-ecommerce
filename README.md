@@ -7,10 +7,10 @@ Carrinho de compras e-commerce:
 - Quando o valor total for maior que R$10,00 reais aparece a mensagem de frete grátis! \o/
 
 Para rodar o projeto execute os seguintes comandos:
-
-npm install
-npx json-server --watch data/abaixo.json --port 5001
-npx json-server --watch data/acima.json --port 5000
-npm start
-
+<p>
+-npm install
+-npx json-server --watch data/abaixo.json --port 5001
+-npx json-server --watch data/acima.json --port 5000
+-npm start
+<p>
 Nome: Victor Higa Cel: (11)97401-7926 E-mail: viih.higa@gmail.com
